@@ -1,1 +1,3 @@
-console.log("Akshhat")
+const squareNumbers = (arr) => {
+    
+}
