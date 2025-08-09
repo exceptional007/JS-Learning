@@ -1,0 +1,2 @@
+JS is prototype Programming lang.
+But also supports OOP concepts.
