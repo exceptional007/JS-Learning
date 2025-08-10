@@ -57,5 +57,32 @@ document.getElementById("clickMeButton").addEventListener
 
 document.getElementById("teaList").addEventListener
 ('click', function (event) {
-    console.log(event.target);
+    if (event.target && event.target.matches(".teaItems")) {
+        alert("You selected: "+ event.target.textContent)
+    }
+})
+
+// example 8
+
+document.getElementById("feedbackForm").addEventListener
+('submit', function (event) {
+    event.preventDefault()
+    let feedback = document.getElementById('feedbackInput').value
+    console.log(feedback);
+    document.getElementById("feedbackDisplay").textContent
+    = `feedback is ${feedback}`   
+}) 
+
+// examle 9
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('domStatus').textContent = "DOM Loaded Successfully"
+})
+
+// example 10
+
+document.getElementById("toggleHighlight").
+addEventListener('click', function () {
+    let descriptionText = document.getElementById("descriptionText");
+    descriptionText.classList.add("highlight")
 })
