@@ -1,3 +1,1 @@
-const squareNumbers = (arr) => {
-    
-}
+console.log("hello");
