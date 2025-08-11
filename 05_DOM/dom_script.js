@@ -14,7 +14,7 @@ document.getElementById("highlightFirstCity").
 addEventListener('click', function () {
     let hold = document.getElementById("citiesList")
     console.log(hold);
-    citisList.firstElementChild.classList.add('highlight');
+    citiesList.firstElementChild.classList.add('highlight');
     
 })
 
@@ -40,9 +40,9 @@ document.getElementById('addNewItem').addEventListener
 
 // example 5
 
-document.getElementById("removeLastItem").addEventListener
+document.getElementById("removeLastTask").addEventListener
 ('click', function () {
-    let taskList = document.getElementById("taskList")
+    let taskList = document.getElementById("TaskList")
     taskList.lastElementChild.remove();
 })
 
@@ -57,7 +57,7 @@ document.getElementById("clickMeButton").addEventListener
 
 document.getElementById("teaList").addEventListener
 ('click', function (event) {
-    if (event.target && event.target.matches(".teaItems")) {
+    if (event.target && event.target.matches(".teaItem")) {
         alert("You selected: "+ event.target.textContent)
     }
 })
