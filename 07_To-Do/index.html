@@ -19,11 +19,26 @@
             <button onclick="addTask()" id="add-task-btn">Add</button>
         </div>
 
+        <div class="filters">
+            <button id="all-tasks" class="active">All</button>
+            <button id="active-tasks">Pending</button>
+            <button id="completed-tasks">Completed</button>
+        </div>
+
         <ul id="todo-list">
-            <li> REady</li>
+            <li></li>
         </ul>
+
+        <p id="no-tasks-message" class="no-tasks-message" style="display: none;"></p>
+
+
+        <div class="action-buttons">
+            <button id="complete-all-btn">Complete All</button>
+            <button id="delete-all-btn">Delete All</button>
+        </div>
+        <p class="footer-text">Made with ❤️ by <a href="https://github.com/exceptional007">Akshhat</a></p>
     </div>
-   
+
    <script src="./script.js"></script>
 </body>
 </html>
