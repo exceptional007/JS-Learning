@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mausam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mausam: Apke Seher Ka....</h1>
+        <div class="input-container">
+            <input type="text" id="city-input" placeholder="Enter Seher">
+            <button id="get-weather-btn">Get Mausam</button>
+        </div>
+        <div id="weather-info" class="hidden">
+            <h2 id="city-name">Gorakhpur</h2>
+            <p id="temprature">32 C</p>
+            <p id="description">Heavy Thunderstrom</p>
+        </div>
+        <p id="error-message" class="hidden">Seher not Found. Please try Again.</p>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
