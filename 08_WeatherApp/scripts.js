@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
    const cityInput = document.getElementById("city-input")
    const getWeatherBtn = document.getElementById("get-weather-btn")
@@ -6,10 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
    const temperatureDisplay = document.getElementById("temperature")
    const descriptionDisplay = document.getElementById("description")
    const errorMessage = document.getElementById("error-message")
-   
-   const API_KEY = apiKey
     
-
    getWeatherBtn.addEventListener('click', async () => {
     const city = cityInput.value.trim()
     
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // gets the data
 
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
+        const url = `/api/weather?city=${encodeURIComponent(city)}`;
         const response = await fetch(url)
         console.log(typeof response);
         console.log("Response", response);
@@ -50,9 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
    function displayWeatherData(data) {
 
         console.log(data);
-        const {name, main, weather} = data
+        const {name, main, weather} = data;
         cityNameDisplay.textContent = name;
-        let temperature = main.temp-273.15;
+        let temperature = main.temp - 273.15;
         temperature = parseFloat(temperature.toFixed(2));
         temperatureDisplay.textContent = `Temperature : ${temperature}\u2103`;
         let weatherDesc = weather[0].description;
